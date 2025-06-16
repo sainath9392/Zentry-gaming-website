@@ -116,10 +116,17 @@ body {
   .hero-heading {
     font-family: "Zentry", sans-serif;
     font-weight: 900;
-    font-size: 11.75rem;
+    font-size: 3.75rem;
     text-transform: uppercase;
     font-style: normal;
   }
+
+  @media (min-width: 640px) {
+    .hero-heading {
+      font-size: 10.5rem;
+    }
+  }
+
 
   .about-subtext {
     position: absolute;
