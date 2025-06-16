@@ -1,11 +1,12 @@
 import React, { useRef, useState } from "react";
+import Button from "./Button";
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
   const [hasClicked, setHasClicked] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [loadedVideos, setLoadedVideos] = useState(0);
-  const totalVideos = 3;
+  const totalVideos = 4;
   const nextVideoRef = useRef(null);
 
   const upcomingVideoIndex = (currentIndex % totalVideos) + 1;
@@ -54,7 +55,7 @@ const Hero = () => {
           />
           <video
             src={getVideoSrc(
-              currentIndex === totalVideos - 1 ? 1 : currentIndex
+              currentIndex === totalVideos + 1 ? 1 : currentIndex
             )}
             loop
             autoPlay
@@ -71,6 +72,7 @@ const Hero = () => {
                 <h1 className="special-font hero-heading text-blue-100">redifi<b>n</b>e</h1>
                 <p className="mb-5 max-w-64 font-robert-regular text-blue-100">Enter the Metagame layer <br />
                 Unleash the Play Economy</p>
+                <Button />
             </div>
         </div>
       </div>
