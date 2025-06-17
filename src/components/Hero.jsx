@@ -153,6 +153,13 @@ const Hero = () => {
         <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">
           G<b>a</b>ming
         </h1>
+        <div className="absolute top-0 left-0 size-full">
+          <div className="mt-24 px-5 sm:px-10">
+            <h1 className="special-font hero-heading text-black">
+              redifi<b>n</b>e
+            </h1>
+          </div>
+        </div>
     </div>
   );
 };
