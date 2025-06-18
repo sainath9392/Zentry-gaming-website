@@ -68,7 +68,7 @@ const Navbar = () => {
               title={"Products"}
               rightIcon={<TiLocationArrow />}
               containerClass={
-                "bg-blue-50 md:flex hidden items-center justify-center gap-1"
+                "bg-blue-50 md:flex max-sm:flex items-center justify-center gap-1"
               }
             />
           </div>

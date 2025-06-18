@@ -4,9 +4,9 @@ import { TiLocationArrow } from "react-icons/ti";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-import {ScrollTrigger} from "gsap/all";
+import { ScrollTrigger } from "gsap/all";
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -26,11 +26,11 @@ const Hero = () => {
   const handleVideoload = () => {
     setLoadedVideos((prev) => prev + 1);
   };
-  useEffect(()=>{
-    if(loadedVideos === totalVideos -1){
-      setIsLoading(false)
+  useEffect(() => {
+    if (loadedVideos === totalVideos - 1) {
+      setIsLoading(false);
     }
-  },[loadedVideos])
+  }, [loadedVideos]);
 
   useGSAP(
     () => {
@@ -59,19 +59,19 @@ const Hero = () => {
 
   useGSAP(() => {
     gsap.set("#video-frame", {
-      clipPath: "polygon(14% 0%, 72% 0%, 90% 90%, 0% 100%)",
-      borderRadius: "0 0 40% 10%",
+      clipPath: "polygon(23% 0, 80% 0, 90% 89%, 7% 85%)",
+      borderRadius: "0% 0 30% 30%",
     });
     gsap.from("#video-frame", {
       clipPath: "polygon(0% 0%,100% 0%,100% 100%, 0% 100%)",
-      borderRadius:'0 0 0 0',
-      ease:'power1.inOut',
-      scrollTrigger:{
-        trigger:'#video-frame',
-        start:'center center',
-        end:'bottom center',
+      borderRadius: "0 0 0 0",
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: "#video-frame",
+        start: "center center",
+        end: "bottom center",
         scrub: true,
-      }
+      },
     });
   });
 
@@ -89,7 +89,7 @@ const Hero = () => {
       )}
       <div
         id="video-frame"
-        className="relative z-10 h-dvh overflow-y-hidden w-screen overflow-x-hidden rounded-lg bg-blue-75"
+        className="relative z-10 h-dvh overflow-y-hidde w-screen overflow-x-hidden rounded-lg bg-blue-75"
       >
         <div>
           <div className="mask-clip-path absolute-center absolute z-50 size-64 cursor-pointer overflow-hidden rounded-lg">
@@ -122,7 +122,7 @@ const Hero = () => {
               currentIndex === totalVideos + 1 ? 1 : currentIndex
             )}
             loop
-            // autoPlay
+            autoPlay
             muted
             className="absolute left-0 top-0 size-full object-cover object-center"
             onLoadedData={handleVideoload}
@@ -148,18 +148,17 @@ const Hero = () => {
             />
           </div>
         </div>
-
       </div>
-        <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">
-          G<b>a</b>ming
-        </h1>
-        <div className="absolute top-0 left-0 size-full">
-          <div className="mt-24 px-5 sm:px-10">
-            <h1 className="special-font hero-heading text-black">
-              redifi<b>n</b>e
-            </h1>
-          </div>
+      <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">
+        G<b>a</b>ming
+      </h1>
+      <div className="absolute top-0 left-0 size-full">
+        <div className="mt-24 px-5 sm:px-10">
+          <h1 className="special-font hero-heading text-black">
+            redifi<b>n</b>e
+          </h1>
         </div>
+      </div>
     </div>
   );
 };
