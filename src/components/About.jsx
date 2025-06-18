@@ -47,6 +47,13 @@ const About = () => {
             className="absolute left-0 top-0 size-full object-cover"
           />
         </div>
+        <div className="w-[70vh]">
+          <img
+            src="img/floating-stones.webp"
+            alt="background"
+            className="absolute left-0 top-0 size-full object-cover z-50"
+          />
+        </div>
       </div>
     </div>
   );
