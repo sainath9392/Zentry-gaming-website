@@ -61,7 +61,7 @@ const Features = () => {
           </p>
         </div>
 
-        <div className="border-hsla md:h-[40vh] max-lg:h-[75vh] relative mb-7 h-96  overflow-hidden rounded-md lg:mx-30">
+        <div className="border-hsla md:h-[40vh] lg:h-[75vh] relative mb-7 h-  overflow-hidden rounded-md ">
           <BentoCard
             src="videos/feature-1.mp4"
             title={
@@ -75,7 +75,7 @@ const Features = () => {
           />
         </div>
 
-        <div className="grid h-[90vh] lg:h-[135vh] xl:h-[165vh] grid-cols-2 grid-rows-3 gap-7 lg:mx-20">
+        <div className="grid h-[90vh] lg:h-[135vh] xl:h-[165vh] grid-cols-2 grid-rows-3 gap-7 ">
           <div className="bento-tilt_1 row-span-1 col-span-2 max-sm:h-[45vh] md:col-span-1 md:row-span-2">
             <BentoCard
               conatinerClass={"object-cover md:object-fill max-sm:h-[45vh] max-sm:w-[70vw] "}
