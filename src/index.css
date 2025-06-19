@@ -144,7 +144,7 @@ body {
     left: 50%;
     top: 0;
     z-index: 20;
-    height: 60vh;
+    height: 50vh;
     width: 18rem;
     transform: translateX(-50%);
     overflow: hidden;
@@ -153,7 +153,8 @@ body {
 
   @media (min-width: 640px) {
     .about-image {
-      width: 24rem;
+      width: 21rem;
+      height: 60vh;
     }
   }
 
