@@ -21,6 +21,8 @@ body {
 }
 
 @layer base {
+  /* Ensure these font files exist in the ./fonts/ directory relative to this CSS file.
+     If not, update the src paths below to the correct locations or remove the @font-face rules for missing fonts. */
   @font-face {
     font-family: "circular-web";
     src: url("./fonts/circularweb-book.woff2") format("woff2");
