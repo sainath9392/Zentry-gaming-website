@@ -1,24 +1,34 @@
 import React, { useRef } from "react";
 import AnimatedTitle from "./AnimatedTitle";
 import gsap from "gsap";
+import RoundedCorners from "./RoundedCorners";
 
 const Story = () => {
-  const frameRef = useRef("null");
+  const frameRef = useRef(null);
 
-  const handleMouseLeave = () => {};
+  const handleMouseLeave = () => {
+    const element = frameRef.current;
+    
+    gsap.to(element,{
+      duration:0.3,
+      roatateX:0,
+      rotateY:0,
+      ease:'power1.inOut'
+    })
+  };
 
   const handleMouseMove = (e) => {
-    const { clientX, ClientY } = e;
+    const { clientX, clientY } = e;
     const element = frameRef.current;
 
     if (!element) return;
 
     const rect = element.getBoundingClientRect();
     const x = clientX - rect.left;
-    const y = ClientY - rect.top;
+    const y = clientY - rect.top;
 
     const centerX = rect.width / 2;
-    const centerY = rect.heigth / 2;
+    const centerY = rect.height / 2;
 
     const rotateX = ((y - centerY) / centerY) * -10;
     const rotateY = ((x - centerX) / centerX) * 10;
@@ -48,18 +58,26 @@ const Story = () => {
           />
           <div className="story-img-container">
             <div className="story-img-mask">
-              <img
-                ref={frameRef}
-                onMouseLeave={handleMouseLeave}
-                onMouseUp={handleMouseLeave}
-                onMouseEnter={handleMouseLeave}
-                onMouseMove={handleMouseMove}
-                src="/img/entrance.webp"
-                alt="entrance"
-                className="object-contain"
-              />
+              <div className="story-img-content">
+                <img
+                  ref={frameRef}
+                  onMouseLeave={handleMouseLeave}
+                  onMouseUp={handleMouseLeave}
+                  onMouseEnter={handleMouseLeave}
+                  onMouseMove={handleMouseMove}
+                  src="/img/entrance.webp"
+                  alt="entrance"
+                  className="object-contain"
+                />
+              </div>
             </div>
+            <RoundedCorners/>
           </div>
+        </div>
+
+        <div className="-mt-80 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end">
+          <p>Where realms converge, lies Zentry and the boundless pillar. Discover its secrets and shape your fate amidst infinite opportunities.</p>
+          
         </div>
       </div>
     </section>
