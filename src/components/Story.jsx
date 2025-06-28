@@ -3,6 +3,7 @@ import AnimatedTitle from "./AnimatedTitle";
 import gsap from "gsap";
 import RoundedCorners from "./RoundedCorners";
 import Button from "./Button";
+import Specs from "./Specs";
 
 const Story = () => {
   const frameRef = useRef(null);
@@ -61,6 +62,7 @@ const Story = () => {
               containerClass={
                 "mt-5 pointer-events-none mix-blend-difference relative z-10"
               }
+              color={"flex-center"}
             />
             <div className="story-img-container">
               <div className="story-img-mask">
@@ -106,19 +108,46 @@ const Story = () => {
           <AnimatedTitle
             title={"the univ<b>e</b>rse <br />powered by ZE<b>n</b>T"}
             sectionId="#story"
-            containerClass={
-              "mt-5 pointer-events-none relative z-10"
-            }
-            color={"text-black text-left"}
+            containerClass={"mt-5 pointer-events-none relative z-10 "}
+            color={"text-black text-left flex"}
           />
         </div>
-        <div className="h-[350px]  flex justify-center max-sm:w-full md:absolute bottom-5 right-5 ">
+        <div className="h-[350px] lg:h-[400px] flex justify-center max-sm:w-full md:absolute bottom-5 right-5  mix-blend-darken  ">
           <video
-            className=" h-full w-fit max-sm:mt-100"
+            className=" h-full w-fit max-sm:mt-55 "
             src="/videos/symbol.mp4"
             autoPlay
             loop
             muted
+          />
+        </div>
+        <div className="flex-col h-[150px] absolute bottom-10 left-10 max-w-md ">
+          <Specs
+            title={"Shaping zentry Collectively"}
+            no={"01"}
+            context={
+              "Participate in governance, influence key decisions in the ever-growing Zentry Universe that is limited only by people's imaginations"
+            }
+            containerClass={"mb-3"}
+            
+          />
+          <Specs
+            title={"Unlocking Economic Opportunity"}
+            no={"02"}
+            context={
+              "ZENT, a commodity-based currency that unlocks exclusive benefits, airdrops, quotas, and co-creation within and beyond Zentry ecosystem."
+            }
+            containerClass={"mb-3"}
+            
+          />
+          <Specs
+            title={"Sharing Value Accrued"}
+            no={"03"}
+            context={
+              "ZENT holders thrive as Zentry grows, benefiting from the expansive partnerships, treasury investment and economic activities."
+            }
+            containerClass={"mb-3"}
+           
           />
         </div>
       </section>
