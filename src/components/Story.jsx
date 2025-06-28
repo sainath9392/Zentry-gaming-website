@@ -13,7 +13,7 @@ const Story = () => {
 
     gsap.to(element, {
       duration: 0.3,
-      roatateX: 0,
+      rotateX: 0,
       rotateY: 0,
       ease: "power1.inOut",
     });
