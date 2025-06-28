@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import AnimatedTitle from "./AnimatedTitle";
 import gsap from "gsap";
 import RoundedCorners from "./RoundedCorners";
@@ -10,10 +10,76 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Story = () => {
   const frameRef = useRef(null);
+  const sectionsRef = useRef([]);
+
+  useLayoutEffect(() => {
+    const section2 = sectionsRef.current[1];
+    const color = section2.getAttribute("data-color");
+    const section1 = sectionsRef.current[0];
+
+    const color2 = section2.getAttribute("data-color");
+    const background = document.getElementById("story-bg");
+    const headingWords = section2.querySelectorAll(".animated-word");
+
+    ScrollTrigger.create({
+      trigger: section1,
+      start: "bottom center",
+      end: "top center",
+      onEnter: () => {
+        gsap.to(background, {
+          backgroundColor: color2,
+          duration: 0.5,
+        });
+      },
+      onLeaveBack: () => {
+        gsap.to(background, {
+          backgroundColor: "#000000",
+          duration: 0.5,
+        });
+      },
+    });
+
+    ScrollTrigger.create({
+      trigger: section2,
+      start: "top 50%",
+      end: "bottom 50%",
+      onEnter: () => {
+        gsap.to(section2, {
+          backgroundColor: color,
+          duration: 0,
+        });
+        gsap.to(headingWords, { color: "#000000", duration: 0 });
+      },
+      onLeave: () => {
+        gsap.to(section2, {
+          backgroundColor: "#000000",
+          duration: 0,
+        });
+        gsap.to(headingWords, { color: "#ffffff", duration: 0 });
+      },
+      onEnterBack: () => {
+        gsap.to(section2, {
+          backgroundColor: color,
+          duration: 0,
+        });
+        gsap.to(headingWords, { color: "#000000", duration: 0 });
+      },
+      onLeaveBack: () => {
+        gsap.to(section2, {
+          backgroundColor: "#000000",
+          duration: 0,
+        });
+        gsap.to(headingWords, { color: "#ffffff", duration: 0 });
+      },
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
 
   const handleMouseLeave = () => {
     const element = frameRef.current;
-
     gsap.to(element, {
       duration: 0.3,
       rotateX: 0,
@@ -25,7 +91,6 @@ const Story = () => {
   const handleMouseMove = (e) => {
     const { clientX, clientY } = e;
     const element = frameRef.current;
-
     if (!element) return;
 
     const rect = element.getBoundingClientRect();
@@ -49,10 +114,17 @@ const Story = () => {
 
   return (
     <>
+      <div
+        id="story-bg"
+        className="fixed top-0 left-0 h-screen w-screen -z-10 transition-colors duration-500"
+        style={{ backgroundColor: "#000000" }}
+      />
+      {/* Section 1: Static Black */}
       <section
-        id="story"
+        ref={(el) => (sectionsRef.current[0] = el)}
         data-color="#000000"
-        className="min-h-dvh w-screen bg-black text-blue-50"
+        className="min-h-dvh w-screen text-blue-50"
+        style={{ backgroundColor: "#000000", color: "#ffffff" }}
       >
         <div className="flex size-full flex-col items-center py-10 pb-24">
           <p className="font-general text-sm uppercase md:text-[10px]">
@@ -62,10 +134,8 @@ const Story = () => {
             <AnimatedTitle
               title={"the st<b>o</b>ry of <br />a hidden real<b>m</b>"}
               sectionId="#story"
-              containerClass={
-                "mt-5 pointer-events-none mix-blend-difference relative z-10"
-              }
-              color={"flex-center"}
+              containerClass="animated-title mt-5 pointer-events-none mix-blend-difference relative z-10"
+              color="flex-center"
             />
             <div className="story-img-container">
               <div className="story-img-mask">
@@ -102,29 +172,34 @@ const Story = () => {
           </div>
         </div>
       </section>
+
+      {/* Section 2: Color Changing */}
       <section
-        id="story"
+        ref={(el) => (sectionsRef.current[1] = el)}
         data-color="#EDFF66"
-        className="relative min-h-dvh w-screen bg-[#EDFF66] text-blue-50"
+        className="relative min-h-dvh w-screen"
+        style={{ backgroundColor: "#000000", color: "#ffffff" }}
       >
         <div className="absolute top-5 left-5">
           <AnimatedTitle
             title={"the univ<b>e</b>rse <br />powered by ZE<b>n</b>T"}
-            sectionId="#story"
-            containerClass={"mt-5 pointer-events-none relative z-10 "}
-            color={"text-black text-left flex"}
+            sectionId="#story-section-2"
+            containerClass="animated-title mt-5 pointer-events-none relative z-10"
+            color="text-left flex text-white"
           />
         </div>
-        <div className="h-[350px] lg:h-[400px] flex justify-center max-sm:w-full md:absolute bottom-5 right-5  mix-blend-darken  ">
+
+        <div className="h-[250px] lg:h-[400px] flex justify-center max-sm:w-full md:absolute bottom-5 right-5 mix-blend-darken">
           <video
-            className=" h-full w-fit max-sm:mt-55 "
+            className="h-full w-fit max-xs:mt-50 max-sm:mt-55 md:mt-0"
             src="/videos/symbol.mp4"
             autoPlay
             loop
             muted
           />
         </div>
-        <div className="flex-col h-[150px] absolute bottom-10 left-10 max-w-md ">
+
+        <div className="flex-col h-[150px] absolute bottom-10 left-10 max-w-md">
           <Specs
             title={"Shaping zentry Collectively"}
             no={"01"}

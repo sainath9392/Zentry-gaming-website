@@ -17,6 +17,7 @@ body {
   width: 100dvw;
   overflow-x: hidden;
   background-color: #dfdff0;
+  transition: background-color 0.2s ease;
   font-family: "General Sans", sans-serif;
 }
 
