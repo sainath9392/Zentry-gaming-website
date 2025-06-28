@@ -4,6 +4,9 @@ import gsap from "gsap";
 import RoundedCorners from "./RoundedCorners";
 import Button from "./Button";
 import Specs from "./Specs";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Story = () => {
   const frameRef = useRef(null);
@@ -129,7 +132,6 @@ const Story = () => {
               "Participate in governance, influence key decisions in the ever-growing Zentry Universe that is limited only by people's imaginations"
             }
             containerClass={"mb-3"}
-            
           />
           <Specs
             title={"Unlocking Economic Opportunity"}
@@ -138,7 +140,6 @@ const Story = () => {
               "ZENT, a commodity-based currency that unlocks exclusive benefits, airdrops, quotas, and co-creation within and beyond Zentry ecosystem."
             }
             containerClass={"mb-3"}
-            
           />
           <Specs
             title={"Sharing Value Accrued"}
@@ -147,7 +148,6 @@ const Story = () => {
               "ZENT holders thrive as Zentry grows, benefiting from the expansive partnerships, treasury investment and economic activities."
             }
             containerClass={"mb-3"}
-           
           />
         </div>
       </section>
