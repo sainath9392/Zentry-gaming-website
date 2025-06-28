@@ -2,19 +2,20 @@ import React, { useRef } from "react";
 import AnimatedTitle from "./AnimatedTitle";
 import gsap from "gsap";
 import RoundedCorners from "./RoundedCorners";
+import Button from './Button'
 
 const Story = () => {
   const frameRef = useRef(null);
 
   const handleMouseLeave = () => {
     const element = frameRef.current;
-    
-    gsap.to(element,{
-      duration:0.3,
-      roatateX:0,
-      rotateY:0,
-      ease:'power1.inOut'
-    })
+
+    gsap.to(element, {
+      duration: 0.3,
+      roatateX: 0,
+      rotateY: 0,
+      ease: "power1.inOut",
+    });
   };
 
   const handleMouseMove = (e) => {
@@ -71,13 +72,19 @@ const Story = () => {
                 />
               </div>
             </div>
-            <RoundedCorners/>
+            <RoundedCorners />
           </div>
         </div>
 
         <div className="-mt-80 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end">
-          <p>Where realms converge, lies Zentry and the boundless pillar. Discover its secrets and shape your fate amidst infinite opportunities.</p>
-          
+          <div className="flex h-full w-fit flex-col items-center md:items-start">
+            <p className="max-w-sm mt-3 text-center font-circular-web text-violet-50 md:text-start">
+              Where realms converge, lies Zentry and the boundless pillar.
+              Discover its secrets and shape your fate amidst infinite
+              opportunities.
+            </p>
+            <Button id={"realm-button"} title={"discover prologue"} containerClass={"mt-5 "} />
+          </div>
         </div>
       </div>
     </section>
