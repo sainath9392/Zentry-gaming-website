@@ -18,23 +18,22 @@ const Story = () => {
     const section1 = sectionsRef.current[0];
 
     const color2 = section2.getAttribute("data-color");
-    const background = document.getElementById("story-bg");
     const headingWords = section2.querySelectorAll(".animated-word");
 
     ScrollTrigger.create({
       trigger: section1,
-      start: "bottom center",
-      end: "top center",
+      start: "bottom 50%",
+      end: "top 50%",
       onEnter: () => {
-        gsap.to(background, {
+        gsap.to(section1, {
           backgroundColor: color2,
-          duration: 0.5,
+          duration: 0,
         });
       },
       onLeaveBack: () => {
-        gsap.to(background, {
+        gsap.to(section1, {
           backgroundColor: "#000000",
-          duration: 0.5,
+          duration: 0,
         });
       },
     });
@@ -114,11 +113,6 @@ const Story = () => {
 
   return (
     <>
-      <div
-        id="story-bg"
-        className="fixed top-0 left-0 h-screen w-screen -z-10 transition-colors duration-500"
-        style={{ backgroundColor: "#000000" }}
-      />
       {/* Section 1: Static Black */}
       <section
         ref={(el) => (sectionsRef.current[0] = el)}
