@@ -50,19 +50,41 @@ const Discover = () => {
     <section
       ref={(el) => (sectionsRef.current[0] = el)}
       data-color="#dfdff0"
-      className="min-h-dvh overflow-y-hidden w-screen "
+      className="min-h-dvh overflow-y-hidden w-screen sm:pt-20"
       style={{ backgroundColor: "#EDFF66", color: "#ffffff" }}
     >
-      <div className="flex-center  w-full">
-        <div className="flex-col relative mt-20  sm:mt-0">
-          <AnimatedTitle
-            title={`We're b<b>u</b>ilding <br />a new    realit<b>y</b> <br />that rew<b>a</b>rds <br />play<b>e</b>rs    and <br />e<b>m</b>powers <br />hu<b>m</b>ans & AI <br />to    thri<b>v</b>e`}
-            containerClass="animated-title  w-fit mt-40 md:mt-20 z-10"
-            color={"flex justify-center text-black h-[50px] md:h-[80px] md:px-2 sm:text-6xl text-5xl md:text-8xl font-[2000]"}
-          />
-          <HiddenImage containerClass={"absolute sm:top-59 sm:left-42 md:top-48 md:left-65 md:hover:top-40 md:hover:left-48 border hover:border-2 hover:border-black "} src={'/img/hiddenImg1.webp'} />
-          <HiddenImage containerClass={"absolute top-86 left-59  md:top-90 md:left-90 md:hover:top-82 md:hover:left-72 border hover:border-2 hover:border-black"} src={'/img/hiddenImg2.webp'} />
-          <HiddenImage containerClass={"absolute sm:bottom-3 sm:left-38 md:left-59 md:hover:-bottom-4 md:hover:left-41 border hover:border-2 hover:border-black "} src={'/img/hiddenImg3.webp'} />
+      <div className="flex-col justify-center items-center">
+        <div className="flex-center  w-full">
+          <div className="flex-col relative ">
+            <p className="font-general absolute  ani text-sm uppercase md:text-[10px] text-center top-32 left-31 sm:left-37 md:top-14 md:left-73 ">
+              who we are
+            </p>
+            <AnimatedTitle
+              title={`We're b<b>u</b>ilding <br />a new    realit<b>y</b> <br />that rew<b>a</b>rds <br />play<b>e</b>rs    and <br />e<b>m</b>powers <br />hu<b>m</b>ans & AI <br />to    thri<b>v</b>e`}
+              containerClass="animated-title  w-fit mt-40 md:mt-20 z-10"
+              color={
+                "flex justify-center h-[50px] md:h-[80px] md:px-2 sm:text-6xl ani text-5xl md:text-8xl font-[2000]"
+              }
+            />
+            <HiddenImage
+              containerClass={
+                "absolute top-58 left-36 hover:top-40 hover:left-20 sm:top-59 sm:left-42 md:top-48 md:left-65 md:hover:top-40 md:hover:left-48 border hover:border-2 hover:border-black "
+              }
+              src={"/img/hiddenImg1.webp"}
+            />
+            <HiddenImage
+              containerClass={
+                "absolute top-85 left-49.5 hover:top-70 hover:left-40 sm:top-86 sm:left-59  md:top-90 md:left-90 md:hover:top-82 md:hover:left-72 border hover:border-2 hover:border-black"
+              }
+              src={"/img/hiddenImg2.webp"}
+            />
+            <HiddenImage
+              containerClass={
+                "absolute bottom-5 left-33 hover:left-15 hover:-bottom-7 sm:bottom-3 sm:left-38 md:left-59 md:hover:-bottom-4 md:hover:left-41 border hover:border-2 hover:border-black "
+              }
+              src={"/img/hiddenImg3.webp"}
+            />
+          </div>
         </div>
       </div>
     </section>
