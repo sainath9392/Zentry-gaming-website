@@ -11,6 +11,8 @@ const Discover = () => {
   useLayoutEffect(() => {
     const section1 = sectionsRef.current[0];
     const color = section1.getAttribute("data-color");
+    const para = section1.querySelectorAll(".ani");
+    const para2 = section1.querySelectorAll(".aniBack");
 
     ScrollTrigger.create({
       trigger: section1,
@@ -19,6 +21,14 @@ const Discover = () => {
       onEnter: () => {
         gsap.to(section1, {
           backgroundColor: color,
+          duration: 0,
+        });
+        gsap.to(para, {
+          color: "black",
+          duration: 0,
+        });
+        gsap.to(para2, {
+          backgroundColor: "black",
           duration: 0,
         });
       },
@@ -31,6 +41,14 @@ const Discover = () => {
       onEnterBack: () => {
         gsap.to(section1, {
           backgroundColor: color,
+          duration: 0,
+        });
+        gsap.to(para, {
+          color: "black",
+          duration: 0,
+        });
+        gsap.to(para2, {
+          backgroundColor: "black",
           duration: 0,
         });
       },
@@ -68,19 +86,19 @@ const Discover = () => {
             />
             <HiddenImage
               containerClass={
-                "absolute top-58 left-36 hover:top-40 hover:left-20 sm:top-59 sm:left-42 md:top-48 md:left-65 md:hover:top-40 md:hover:left-48 border hover:border-2 hover:border-black "
+                "absolute top-58 left-36 hover:top-40 hover:left-20 sm:top-59 sm:left-42 md:top-48 md:left-65 md:hover:top-40 md:hover:left-48 border  hover:border-2 hover:border-black "
               }
               src={"/img/hiddenImg1.webp"}
             />
             <HiddenImage
               containerClass={
-                "absolute top-85 left-49.5 hover:top-70 hover:left-40 sm:top-86 sm:left-59  md:top-90 md:left-90 md:hover:top-82 md:hover:left-72 border hover:border-2 hover:border-black"
+                "absolute top-85 left-49.5 hover:top-70 hover:left-40 sm:top-86 sm:left-59  md:top-90 md:left-90 md:hover:top-82 md:hover:left-72 border  hover:border-2 hover:border-black"
               }
               src={"/img/hiddenImg2.webp"}
             />
             <HiddenImage
               containerClass={
-                "absolute bottom-5 left-33 hover:left-15 hover:-bottom-7 sm:bottom-3 sm:left-38 md:left-59 md:hover:-bottom-4 md:hover:left-41 border hover:border-2 hover:border-black "
+                "absolute bottom-5 left-33 hover:left-15 hover:-bottom-7 sm:bottom-3 sm:left-38 md:left-59 md:hover:-bottom-4 md:hover:left-41 border   hover:border-2 hover:border-black "
               }
               src={"/img/hiddenImg3.webp"}
             />

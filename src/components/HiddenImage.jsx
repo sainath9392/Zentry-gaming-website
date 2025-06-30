@@ -1,8 +1,25 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const HiddenImage = ({ containerClass, src }) => {
   const frameRef = useRef(null);
+  const pulseTween = useRef(null);
+
+  useEffect(() => {
+    if (frameRef.current) {
+      pulseTween.current = gsap.to(frameRef.current, {
+        scale: 1.3,
+        duration: 1,
+        repeat: -1,
+        yoyo: true,
+        ease: "power1.inOut",
+      });
+    }
+
+    return () => {
+      pulseTween.current?.kill();
+    };
+  }, []);
 
   const handleMouseLeave = () => {
     const element = frameRef.current;
@@ -12,6 +29,10 @@ const HiddenImage = ({ containerClass, src }) => {
       rotateY: 0,
       ease: "power1.inOut",
     });
+
+    if (pulseTween.current && !pulseTween.current.isActive()) {
+      pulseTween.current.play();
+    }
   };
 
   const handleMouseMove = (e) => {
@@ -29,6 +50,9 @@ const HiddenImage = ({ containerClass, src }) => {
     const rotateX = ((y - centerY) / centerY) * -30;
     const rotateY = ((x - centerX) / centerX) * 30;
 
+    // Stop zooming while tilting
+    pulseTween.current?.pause();
+
     gsap.to(element, {
       duration: 0,
       rotateX,
@@ -45,7 +69,7 @@ const HiddenImage = ({ containerClass, src }) => {
       onMouseEnter={handleMouseLeave}
       onMouseUp={handleMouseLeave}
       onMouseMove={handleMouseMove}
-      className={`h-[15px] w-[15px] md:h-[35px] md:w-[35px] object-fit transition-transform rounded ani overflow-hidden  duration-75 cursor-pointer hover:h-[150px] hover:w-[200px] ${containerClass}`}
+      className={`h-[15px] w-[15px] md:h-[35px] md:w-[35px] object-fit transition-transform rounded aniBack overflow-hidden  duration-75 cursor-pointer hover:h-[150px] hover:w-[200px] ${containerClass}`}
     >
       <img
         src={src}

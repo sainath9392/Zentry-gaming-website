@@ -37,7 +37,7 @@ const AnimatedTitle = ({ title, containerClass, color }) => {
           {line.split(" ").map((word, i) => (
             <span
               key={i}
-              className={`animated-word transition-colors duration-500 ${
+              className={`animated-word transition-colors ani duration-500 ${
                 color || "text-white"
               }`}
               dangerouslySetInnerHTML={{ __html: word }}
