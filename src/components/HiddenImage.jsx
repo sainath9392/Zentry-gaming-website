@@ -69,12 +69,12 @@ const HiddenImage = ({ containerClass, src }) => {
       onMouseEnter={handleMouseLeave}
       onMouseUp={handleMouseLeave}
       onMouseMove={handleMouseMove}
-      className={`h-[15px] w-[15px] md:h-[35px] md:w-[35px] object-fit transition-transform rounded aniBack overflow-hidden  duration-75 cursor-pointer hover:h-[150px] hover:w-[200px] ${containerClass}`}
+      className={`h-[15px] w-[15px] md:h-[35px] md:w-[35px] object-fill  transition-transform rounded aniBack overflow-hidden  duration-75 cursor-pointer hover:h-[160px] hover:w-[220px] ${containerClass}`}
     >
       <img
         src={src}
         alt=""
-        className="object-cover object-center opacity-0 hover:opacity-100 transition-opacity duration-300 z-10"
+        className=" object-cover object-center opacity-0 hover:opacity-100 transition-opacity duration-300 z-10"
       />
     </div>
   );

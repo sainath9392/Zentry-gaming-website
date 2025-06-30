@@ -187,7 +187,7 @@ const Story = () => {
                 style={{ color: "black" }}
                 id={"realm-button"}
                 title={"discover prologue"}
-                containerClass={"mt-5 "}
+                containerClass={"mt-5 px-7 py-3 "}
               />
             </div>
           </div>
