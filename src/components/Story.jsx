@@ -14,8 +14,8 @@ const Story = () => {
 
   useLayoutEffect(() => {
     const section2 = sectionsRef.current[1];
-    const color = section2.getAttribute("data-color");
     const section1 = sectionsRef.current[0];
+    const color = section1.getAttribute("data-color");
     const para = section1.querySelectorAll(".para");
     const para2 = section1.querySelectorAll(".para2");
 
@@ -28,7 +28,7 @@ const Story = () => {
       end: "top 50%",
       onEnter: () => {
         gsap.to(para2, {
-          color: "black",
+          color: color,
           duration: 0,
         });
       },
@@ -46,18 +46,18 @@ const Story = () => {
         gsap.to(para, { color: "#000000", duration: 0 });
         gsap.to(para2, {
           color: "#ffffff",
-          backgroundColor: "#000000",
+          backgroundColor: color,
           duration: 0,
         });
       },
       onLeaveBack: () => {
         gsap.to(section1, {
-          backgroundColor: "#000000",
+          backgroundColor: color,
           duration: 0,
         });
         gsap.to(para, { color: "#ffffff", duration: 0 });
         gsap.to(para2, {
-          color: "#000000",
+          color: color,
           backgroundColor: "#ffffff",
           duration: 0,
         });
@@ -70,21 +70,21 @@ const Story = () => {
       end: "bottom 50%",
       onEnter: () => {
         gsap.to(section2, {
-          backgroundColor: color,
+          backgroundColor: color2,
           duration: 0,
         });
-        gsap.to(headingWords, { color: "#000000", duration: 0 });
+        gsap.to(headingWords, { color: color, duration: 0 });
       },
       onLeave: () => {
         gsap.to(section2, {
-          backgroundColor: "#000000",
+          backgroundColor: "#dfdff0",
           duration: 0,
         });
         gsap.to(headingWords, { color: "#ffffff", duration: 0 });
       },
       onEnterBack: () => {
         gsap.to(section2, {
-          backgroundColor: color,
+          backgroundColor: color2,
           duration: 0,
         });
         gsap.to(headingWords, { color: "#000000", duration: 0 });
@@ -176,7 +176,7 @@ const Story = () => {
             </div>
           </div>
 
-          <div className="-mt-80 flex w-full justify-center md:-mt-64 md:me-44 md:justify-end">
+          <div className="-mt-80 flex w-full justify-center  md:-mt-70 md:me-44 md:justify-end">
             <div className="flex h-full w-fit flex-col items-center md:items-start">
               <p className="para max-w-sm mt-3 text-center font-circular-web text-violet-50 md:text-start">
                 Where realms converge, lies Zentry and the boundless pillar.
