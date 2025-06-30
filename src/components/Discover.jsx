@@ -3,6 +3,7 @@ import React, { useLayoutEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AnimatedTitle from "./AnimatedTitle";
 import HiddenImage from "./HiddenImage";
+import Button from "./Button";
 
 gsap.registerPlugin(ScrollTrigger);
 const Discover = () => {
@@ -29,6 +30,7 @@ const Discover = () => {
         });
         gsap.to(para2, {
           backgroundColor: "black",
+
           duration: 0,
         });
       },
@@ -49,6 +51,7 @@ const Discover = () => {
         });
         gsap.to(para2, {
           backgroundColor: "black",
+
           duration: 0,
         });
       },
@@ -68,11 +71,11 @@ const Discover = () => {
     <section
       ref={(el) => (sectionsRef.current[0] = el)}
       data-color="#dfdff0"
-      className="min-h-dvh overflow-y-hidden w-screen sm:pt-20"
+      className="min-h-dvh overflow-y-hidden w-screen sm:pt-45"
       style={{ backgroundColor: "#EDFF66", color: "#ffffff" }}
     >
-      <div className="flex-col justify-center items-center">
-        <div className="flex-center  w-full">
+      <div className="flex flex-col justify-center items-center min-h-dvh">
+        <div className="flex-center w-full">
           <div className="flex-col relative ">
             <p className="font-general absolute  ani text-sm uppercase md:text-[10px] text-center top-32 left-31 sm:left-37 md:top-14 md:left-73 ">
               who we are
@@ -104,6 +107,19 @@ const Discover = () => {
             />
           </div>
         </div>
+        <p className="text-center m-auto text-xs font-medium ani font-circular-web mt-10 mb-3 max-w-sm">
+          Zentry envisions a future where players, emerging tech, and a new
+          economy unite at the convergence of gaming and AI.
+        </p>
+        <Button
+          style={{
+            transform: "scale(0.7)",
+            transformOrigin: "center",
+          }}
+          id={"realm-button"}
+          title={"discover prologue"}
+          containerClass={"px-9 py-3 aniBack mb-5"}
+        />
       </div>
     </section>
   );
