@@ -2,7 +2,7 @@ import gsap from "gsap";
 import React, { useLayoutEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AnimatedTitle from "./AnimatedTitle";
-import HiddenImage from "./hiddenImage";
+import HiddenImage from "./HiddenImage";
 
 gsap.registerPlugin(ScrollTrigger);
 const Discover = () => {
@@ -54,7 +54,7 @@ const Discover = () => {
       style={{ backgroundColor: "#EDFF66", color: "#ffffff" }}
     >
       <div className="flex-center  w-full">
-        <div className="flex-col relative mt-20">
+        <div className="flex-col relative mt-20  sm:mt-0">
           <AnimatedTitle
             title={`We're b<b>u</b>ilding <br />a new    realit<b>y</b> <br />that rew<b>a</b>rds <br />play<b>e</b>rs    and <br />e<b>m</b>powers <br />hu<b>m</b>ans & AI <br />to    thri<b>v</b>e`}
             containerClass="animated-title  w-fit mt-40 md:mt-20 z-10"

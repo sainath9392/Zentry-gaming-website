@@ -210,9 +210,9 @@ const Story = () => {
           />
         </div>
 
-        <div className="h-[250px] mb-2 lg:h-[400px] flex justify-center max-sm:w-full md:absolute bottom-6 right-5 mix-blend-screen">
+        <div className="h-[250px]  lg:h-[400px] flex justify-center max-sm:w-full md:absolute bottom-6 right-5 mix-blend-screen">
           <video
-            className="h-full w-fit max-xs:mt-50 max-sm:mt-55 md:mt-0 border rounded-[50%]"
+            className="h-full w-fit mt-50 sm:mt-55 md:mt-0 border rounded-[50%]"
             src="/videos/symbol.mp4"
             autoPlay
             loop
