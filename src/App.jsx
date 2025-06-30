@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Features from './components/Features'
 import Story from './components/Story'
 import Discover from './components/Discover'
+import ShowCase from './components/ShowCase'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Features />
       <Story />
       <Discover />
+      <ShowCase />
     </main>
   )
 }
