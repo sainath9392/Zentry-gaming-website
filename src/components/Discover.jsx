@@ -30,13 +30,87 @@ const Discover = () => {
         });
         gsap.to(para2, {
           backgroundColor: "black",
+          color:"#dfdff0",
+          duration: 0,
+        });
+      },
+      onLeave: () => {
+        gsap.to(section1, {
+          backgroundColor: "#000000",
+          duration: 0,
+        });
+        gsap.to(para, {
+          color: "#dfdff0",
+          duration: 0,
+        });
+        gsap.to(para2, {
+          backgroundColor: "#dfdff0",
+          color:"black",
+          duration: 0,
+        });
+      },
+      onEnterBack: () => {
+        gsap.to(section1, {
+          backgroundColor: color,
+          duration: 0,
+        });
+        gsap.to(para, {
+          color: "black",
+          duration: 0,
+        });
+        gsap.to(para2, {
+          backgroundColor: "black",
+          color:"#dfdff0",
+          duration: 0,
+        });
+      },
+      onLeaveBack: () => {
+        gsap.to(section1, {
+          backgroundColor: "#EDFF66",
+          duration: 0,
+        });
+        gsap.to(para, {
+          color: "#000000",
+          duration: 0,
+        });
+        gsap.to(para2, {
+          backgroundColor: "#000000",
+          color:"black",
+          duration: 0,
+        });
+      },
+    });
+    ScrollTrigger.create({
+      trigger: section1,
+      start: "top 50%",
+      end: "bottom 50%",
+      onEnter: () => {
+        gsap.to(section1, {
+          backgroundColor: color,
+          duration: 0,
+        });
+        gsap.to(para, {
+          color: "black",
+          duration: 0,
+        });
+        gsap.to(para2, {
+          backgroundColor: "black",
 
           duration: 0,
         });
       },
       onLeave: () => {
         gsap.to(section1, {
-          backgroundColor: "#EDFF66",
+          backgroundColor: "#000000",
+          duration: 0,
+        });
+        gsap.to(para, {
+          color: "#dfdff0",
+          duration: 0,
+        });
+        gsap.to(para2, {
+          backgroundColor: "#dfdff0",
+          color:"black",
           duration: 0,
         });
       },
@@ -57,7 +131,16 @@ const Discover = () => {
       },
       onLeaveBack: () => {
         gsap.to(section1, {
-          backgroundColor: "#EDFF66",
+          backgroundColor: "#dfdff0",
+          duration: 0,
+        });
+        gsap.to(para, {
+          color: "#dfdff0",
+          duration: 0,
+        });
+        gsap.to(para2, {
+          backgroundColor: "#dfdff0",
+          color:"black",
           duration: 0,
         });
       },
@@ -77,7 +160,7 @@ const Discover = () => {
       <div className="flex flex-col justify-center items-center min-h-dvh">
         <div className="flex-center w-full">
           <div className="flex-col relative ">
-            <p className="font-general absolute  ani text-sm uppercase md:text-[10px] text-center top-32 left-31 sm:left-37 md:top-14 md:left-73 ">
+            <p className="font-general absolute  ani text-sm uppercase md:text-[10px] text-center top-32 left-31 sm:left-37 md:top-14 md:left-71 ">
               who we are
             </p>
             <AnimatedTitle
