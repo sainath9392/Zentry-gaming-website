@@ -210,9 +210,9 @@ const Story = () => {
           />
         </div>
 
-        <div className="h-[250px] lg:h-[400px] flex justify-center max-sm:w-full md:absolute bottom-5 right-5 mix-blend-darken">
+        <div className="h-[250px] mb-2 lg:h-[400px] flex justify-center max-sm:w-full md:absolute bottom-6 right-5 mix-blend-screen">
           <video
-            className="h-full w-fit max-xs:mt-50 max-sm:mt-55 md:mt-0"
+            className="h-full w-fit max-xs:mt-50 max-sm:mt-55 md:mt-0 border rounded-[50%]"
             src="/videos/symbol.mp4"
             autoPlay
             loop
@@ -220,7 +220,7 @@ const Story = () => {
           />
         </div>
 
-        <div className="flex-col h-[150px] absolute bottom-10 left-10 max-w-md">
+        <div className="flex-col h-[150px] absolute bottom-8 left-10 max-w-md">
           <Specs
             title={"Shaping zentry Collectively"}
             no={"01"}
