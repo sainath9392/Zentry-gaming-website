@@ -74,7 +74,7 @@ const HiddenImage = ({ containerClass, src }) => {
       <img
         src={src}
         alt=""
-        className=" object-cover object-center opacity-0 hover:opacity-100 transition-opacity duration-300 z-10"
+        className=" object-cover object-center opacity-0 hover:opacity-100 transition-opacity duration-700 z-10"
       />
     </div>
   );
