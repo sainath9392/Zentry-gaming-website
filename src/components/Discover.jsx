@@ -154,13 +154,13 @@ const Discover = () => {
     <section
       ref={(el) => (sectionsRef.current[0] = el)}
       data-color="#dfdff0"
-      className="min-h-dvh overflow-y-hidden w-screen sm:pt-45"
+      className="min-h-dvh overflow-y-hidden overflow-x-hidden w-screen sm:pt-45"
       style={{ backgroundColor: "#EDFF66", color: "#ffffff" }}
     >
       <div className="flex flex-col justify-center items-center min-h-dvh">
         <div className="flex-center w-full">
           <div className="flex-col relative ">
-            <p className="font-general absolute  ani text-sm uppercase md:text-[10px] text-center top-32 left-31 sm:left-37 md:top-14 md:left-71 ">
+            <p className="font-general absolute  ani font-medium text-xs uppercase md:text-sm text-center top-32 left-31 sm:left-37 md:top-14 md:left-71 ">
               who we are
             </p>
             <AnimatedTitle
