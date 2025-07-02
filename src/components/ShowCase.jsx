@@ -10,6 +10,7 @@ const ShowCase = () => {
   useLayoutEffect(() => {
     const section1 = sectionsRef.current[0];
     const color = section1.getAttribute("data-color");
+    const para = section1.querySelectorAll(".ani");
 
     ScrollTrigger.create({
       trigger: section1,
@@ -20,10 +21,18 @@ const ShowCase = () => {
           backgroundColor: color,
           duration: 0,
         });
+        gsap.to(para, {
+          color: "#dfdff0",
+          duration: 0,
+        });
       },
       onLeave: () => {
         gsap.to(section1, {
-          backgroundColor: "#dfdff0",
+          backgroundColor: "#dfdff2",
+          duration: 0,
+        });
+        gsap.to(para, {
+          color: "#000000",
           duration: 0,
         });
       },
@@ -32,10 +41,18 @@ const ShowCase = () => {
           backgroundColor: color,
           duration: 0,
         });
+        gsap.to(para, {
+          color: "#dfdff2",
+          duration: 0,
+        });
       },
       onLeaveBack: () => {
         gsap.to(section1, {
           backgroundColor: "#dfdff0",
+          duration: 0,
+        });
+        gsap.to(para, {
+          color: "#000000",
           duration: 0,
         });
       },
@@ -48,14 +65,17 @@ const ShowCase = () => {
     <section
       ref={(el) => (sectionsRef.current[0] = el)}
       data-color="#000000"
-      className="min-h-dvh overflow-y-hidden w-screen sm:pt-45 relative"
+      className="min-h-dvh overflow-y-hidden overflow-x-hidden w-screen relative"
     >
-      <div className="flex md:absolute md:left-2 flex-col items-center justify-center w-full">
+      <div className="flex flex-col items-center sm:items-start justify-center sm:justify-start w-full sm:ml-20 mt-50">
+        <p className="font-general  h-[10px] font-medium ani text-xs uppercase md:text-[8px] sm:ml-4 ">
+          who we are
+        </p>
         <AnimatedTitle
           title={"Ze<b>n</b>try at a <br />glan<b>c</b>e"}
-          containerClass="animated-title  w-full mt-40 md:mt-20 z-10"
+          containerClass="animated-title  w-full mt-5 sm:mt-2 z-10 "
           color={
-            "flex justify-center h-[50px] md:h-[80px] md:px-2 sm:text-6xl ani text-5xl md:text-8xl "
+            "flex justify-center sm:justify-start  md:px-2 sm:text-6xl ani text-5xl md:text-[90px] "
           }
         />
       </div>
