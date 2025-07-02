@@ -123,6 +123,12 @@ body {
     text-transform: uppercase;
     font-style: normal;
   }
+  .norm-heading {
+    font-family: "Zentry", sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-style: normal;
+  }
 
   @media (min-width: 640px) {
     .hero-heading {

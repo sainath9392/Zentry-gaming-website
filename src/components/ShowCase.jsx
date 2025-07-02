@@ -67,105 +67,135 @@ const ShowCase = () => {
     <section
       ref={(el) => (sectionsRef.current[0] = el)}
       data-color="#000000"
-      className="min-h-[300vh] overflow-hidden w-screen relative"
+      className="min-h-[350vh] overflow-hidden w-screen relative"
     >
       <div className="flex flex-col items-center sm:items-start justify-center sm:justify-start w-full sm:ml-20 mt-52">
         <p className="font-general h-[10px] font-medium ani text-xs uppercase md:text-[8px] sm:ml-4">
           who we are
         </p>
         <AnimatedTitle
-          title={"Ze<n>try at a <br />glan<c>e"}
+          title={"Ze<n>try at a <br />glan<b>c</b>e"}
           containerClass="animated-title w-full mt-5 sm:mt-2 z-10"
           color="flex justify-center sm:justify-start md:px-2 text-5xl sm:text-6xl md:text-[90px] ani"
         />
       </div>
-
-      <div className="flex flex-col w-full mt-52 relative">
-        <div className="flex justify-between h-[200px] w-[340px] border absolute right-5 border-gray-900 rounded">
-          <div className="flex flex-col w-[4px] items-start justify-start mt-2 ml-2">
-            <p className="font-general font-medium ani text-xs uppercase md:text-[8px]">
-              products
-            </p>
-            <AnimatedTitle
-              title={"4<b>+</b>"}
-              containerClass="animated-title z-10 w-full -ml-10"
-              color="flex justify-start text-7xl ani"
+      <div className="grid grid-cols-1 sm:grid-cols-2">
+        <div className="flex flex-col w-full mt-52 relative">
+          <div className="flex justify-between h-[200px] w-[340px] border absolute right-5 border-gray-900 rounded">
+            <div className="flex flex-col w-[4px] items-start justify-start mt-2 ml-2">
+              <p className="font-general font-medium text-blue-50 text-xs uppercase md:text-[8px]">
+                products
+              </p>
+              <AnimatedTitle
+                title={"4<b>+</b>"}
+                containerClass="animated-title z-10 w-full -ml-10"
+                color="flex justify-start text-7xl ani"
+              />
+            </div>
+            <video
+              className="w-fit object-cover"
+              autoPlay
+              loop
+              muted
+              src="/videos/case1.webm"
             />
           </div>
+        </div>
+
+        <div className=" relative h-[200px] mt-56 overflow-hidden">
+          <div className="absolute h-[200px] right-5 w-[200px] bg-[#EDFF66] rounded z-10">
+            <p className="font-sans  special-font text-9xl ml-2">
+              <b>30+</b>
+            </p>
+          </div>
+          <p className="font-circular-web text-xs font-semibold z-10 absolute bottom-4 right-10">
+            Partners
+          </p>
+        </div>
+
+        <div className="absolute mt-6 h-[380px] w-[280px] bg-[#5542FF] rounded-lg right-20 z-10">
+          <div className="flex flex-col w-[4px] items-start justify-start mt-2 ml-2">
+            <p className="font-circular-web font-medium text-black text-[10px] uppercase ml-3">
+              Tresury
+            </p>
+            <p className="font-sans  special-font text-6xl ml-2">
+              <b>150M+</b>
+            </p>
+          </div>
           <video
-            className="w-fit object-cover"
+            className="w-fit -mt-24 h-[382px]"
             autoPlay
             loop
             muted
-            src="/videos/case1.webm"
+            src="/videos/case3.webm"
           />
-        </div>
-      </div>
-
-      <div className=" relative h-[200px] mt-56 overflow-hidden">
-        <div className="absolute h-[200px] right-5 w-[200px] bg-[#EDFF66] rounded z-10">
-          <p className="font-sans  special-font text-9xl ml-2">
-            <b>30+</b>
-          </p>
-        </div>
-        <p className="font-circular-web text-xs font-semibold z-10 absolute bottom-4 right-10">
-          Partners
-        </p>
-      </div>
-
-      <div className="absolute mt-6 h-[380px] w-[280px] bg-[#5542FF] rounded-lg right-20 z-10">
-        <div className="flex flex-col w-[4px] items-start justify-start mt-2 ml-2">
-          <p className="font-circular-web font-medium text-black text-[10px] uppercase ml-3">
-            Tresury
-          </p>
-          <p className="font-sans  special-font text-6xl ml-2">
-            <b>150M+</b>
-          </p>
-        </div>
-        <video
-          className="w-fit -mt-24 h-[382px]"
-          autoPlay
-          loop
-          muted
-          src="/videos/case3.webm"
-        />
-        <div className="flex justify-around items-center -mt-8">
-          <div className="flex justify-between items-center gap-2">
-            <div className="h-2 w-2 rounded-full bg-black" />
-            <div className="text-[7px] text-blue-100">
-              <p>LIQUID TOKEN</p>
-              <p>78%</p>
+          <div className="flex justify-around items-center -mt-8">
+            <div className="flex justify-between items-center gap-2">
+              <div className="h-2 w-2 rounded-full bg-black" />
+              <div className="text-[7px] text-blue-100">
+                <p>LIQUID TOKEN</p>
+                <p>78%</p>
+              </div>
             </div>
-          </div>
-          <div className="flex justify-between items-center gap-2">
-            <div className="h-2 w-2 rounded-full bg-[#EDFF66]" />
-            <div className="text-[7px] text-blue-100">
-              <p>INVESTMENTS</p>
-              <p>20%</p>
+            <div className="flex justify-between items-center gap-2">
+              <div className="h-2 w-2 rounded-full bg-[#EDFF66]" />
+              <div className="text-[7px] text-blue-100">
+                <p>INVESTMENTS</p>
+                <p>20%</p>
+              </div>
             </div>
-          </div>
-          <div className="flex justify-between items-center gap-2">
-            <div className="h-2 w-2 rounded-full bg-blue-100" />
-            <div className="text-[7px] text-blue-100">
-              <p>NFT ASSETS</p>
-              <p>10%</p>
+            <div className="flex justify-between items-center gap-2">
+              <div className="h-2 w-2 rounded-full bg-blue-100" />
+              <div className="text-[7px] text-blue-100">
+                <p>NFT ASSETS</p>
+                <p>10%</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="absolute mt-108 h-[379px] w-[280px] bg-[#5542FF] rounded-lg left-5 z-10">
-        <div className="flex flex-col w-[4px] items-start justify-start mt-2 ml-2">
-          <p className="font-circular-web font-medium text-black text-[10px] uppercase ml-3">
-            Residents
+        <div className="absolute mt-108 h-[379px] w-[280px] bg-[#5542FF] rounded-lg left-5 z-10">
+          <div className="flex flex-col w-[4px] items-start justify-start mt-2 ml-2">
+            <p className="font-circular-web font-medium text-black text-[10px] uppercase ml-3">
+              Residents
+            </p>
+            <p className="font-sans  special-font text-8xl ml-2">
+              <b>500k+</b>
+            </p>
+          </div>
+          <img className="absolute top-0 z-10" src="/img/case4.webp" alt="" />
+        </div>
+
+        <div className="h-64 w-64 text-blue-50 border overflow-hidden border-gray-800 rounded-lg right-5 absolute mt-209">
+          <p className="font-sans special-font norm-heading text-5xl px-2 py-2 uppercase ml-2">
+            W<b>O</b>rld-class <br />b<b>a</b>ckers
           </p>
-          <p className="font-sans  special-font text-8xl ml-2">
-            <b>500k+</b>
+          <p className="font-general uppercase text-blue-50 -mt-0.4 text-[10px] absolute right-5">
+            Coinbase ventures <br />
+            yzi labs <br />
+            spartan <br />
+            longhash <br />
+            pantera capital <br />
+            animoca brands <br />
+            defiance capital <br />
+            play ventures <br />
+            skyvision capital <br />
+            vessel capital <br />
           </p>
         </div>
-        <img className="absolute top-0 z-10" src="/img/case4.webp" alt="" />
+
+        <div className="bg-slate-300 h-[200px] w-[300px] rounded-lg absolute left-5 mt-279">
+          <div className="flex flex-col items-start justify-start mt-2 ml-2">
+            <p className="font-general font-medium text-black text-xs uppercase md:text-[8px]">
+              Revenue genrated <br />
+              2024
+            </p>
+            <p className="norm-heading absolute left-5 bottom-0 special-font text-9xl">
+              4<b>0M</b>
+            </p>
+          </div>
+        </div>
       </div>
-      
     </section>
   );
 };
