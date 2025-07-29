@@ -80,10 +80,10 @@ const ShowCase = () => {
         />
       </div>
       <div className="flex justify-center items-center w-screen overflow-hidden h-fit">
-        <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-12 gap-7 w-fit sm:w-fit  mt-50">
+        <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-12 gap-7 sm:gap-0 w-fit sm:w-fit  mt-50">
           {/* Row 1 - Left */}
-          <div className="flex justify-end sm:mt-10 lg:-mt-3 col-span-2 sm:col-span-1 row-end-1 sm:row-span-2 mr-5 ">
-            <div className="flex justify-between border h-[200px] w-[350px] sm:w-[350px] border-gray-700 rounded">
+          <div className="flex justify-end sm:mt-10 lg:-mt-3 col-span-2 sm:col-span-1 row-end-1 sm:row-span-2 ">
+            <div className="flex justify-between border h-[200px] w-[350px] sm:w-[300px] md:w-[330px] border-gray-700 rounded">
               <div className="flex flex-col w-[4px] items-start justify-start mt-2 ml-2">
                 <p className="font-general font-medium text-blue-50 text-xs uppercase md:text-[8px]">
                   products
@@ -95,7 +95,7 @@ const ShowCase = () => {
                 />
               </div>
               <video
-                className="w-fit object-cover"
+                className="w-fit object-cover sm:scale-93"
                 autoPlay
                 loop
                 muted
@@ -105,7 +105,7 @@ const ShowCase = () => {
           </div>
 
           {/* Row 1 - Right */}
-          <div className="sm:col-span-1 sm:row-span-2 row-end-4 -mt-5 ml-4">
+          <div className="sm:col-span-1 sm:row-span-2 row-end-4 -mt-5  ml-4">
             <div className="relative h-[379px] w-[280px] sm:h-[300px] sm:w-[220px] md:h-[350px] md:w-[250px] lg:h-[450px] lg:w-[340px] bg-[#5542FF] rounded-sm z-10">
               <div className="flex flex-col w-[4px] items-start justify-start mt-2 ml-2">
                 <p className="font-circular-web font-medium text-black text-[10px] uppercase ml-3">
@@ -124,8 +124,8 @@ const ShowCase = () => {
           </div>
 
           {/* Row 2 - Left */}
-          <div className="flex justify-end sm:col-span-1 row-end-2 sm:row-span-2 -mr-2">
-            <div className="relative rounded-sm h-[180px] w-[180px] sm:h-[145px] sm:w-[145px] md:h-[156px] md:w-[156px] lg:h-[200px] lg:w-[200px] bg-[#EDFF66] z-10 overflow-hidden -mt-3 sm:mt-2 md:mt-5 lg:mt-6">
+          <div className="flex justify-end sm:col-span-1 row-end-2 sm:row-span-2  -mr-2 sm:-mr-0">
+            <div className="relative rounded-sm h-[180px] w-[180px] sm:h-[145px] sm:w-[145px] md:h-[156px] md:w-[156px] lg:h-[200px] lg:w-[200px] bg-[#EDFF66] z-10 overflow-hidden -mt-3 sm:-mt-21">
               <p className="font-sans special-font text-9xl sm:text-7xl lg:text-8xl ml-2">
                 <b>30+</b>
               </p>
@@ -136,12 +136,12 @@ const ShowCase = () => {
           </div>
 
           {/* Row 2 - Right */}
-          <div className="col-span-2 sm:col-span-1 sm:row-span-3 row-end-5 -ml-8 ">
-            <div className="relative h-60 w-60 sm:h-[170px] sm:w-[170px] lg:h-[220px] lg:w-[220px] ms-40 -mt-2 sm:mt-32 md:mt-44 lg:mt-46 border border-gray-700 rounded-lg text-blue-50 z-10">
+          <div className="col-span-2 sm:col-span-1 sm:row-span-3 row-end-5 -mt-2  ms-40  sm:ms-0 -ml-8 sm:ml-3 ">
+            <div className="relative h-60 w-60 sm:h-[180px] sm:w-[180px] lg:h-[220px] lg:w-[220px] border border-gray-700 rounded-sm text-blue-50 z-10">
               <p className="font-sans special-font norm-heading text-4xl sm:text-2xl lg:text-4xl px-2 py-2 leading-none uppercase ml-2">
                 W<b>O</b>rld-class <br /> b<b>a</b>ckers
               </p>
-              <p className="font-general uppercase text-blue-50 text-[10px] sm:text-[8px] absolute right-5 sm:right-1">
+              <p className="font-general uppercase text-blue-50 text-[10px] sm:text-[7.5px] absolute right-5 sm:right-1">
                 Coinbase ventures <br />
                 yzi labs <br />
                 spartan <br />
@@ -157,8 +157,8 @@ const ShowCase = () => {
           </div>
 
           {/* Left - Treasury */}
-          <div className="flex justify-end sm:col-span-1 row-end-3 sm:row-span-2 -mt-3 sm:mt-1 -me-2">
-            <div className="sm:h-[450px] sm:w-[340px] bg-[#5542FF] rounded-sm z-10">
+          <div className="flex justify-end sm:col-span-1 row-end-3 sm:row-span-2 -mt-3  -me-2 sm:me-0 ">
+            <div className="sm:h-[350px] sm:w-[240px] bg-[#5542FF] rounded-sm z-10">
               <div className="flex flex-col w-[4px] items-start justify-start mt-2 ml-2">
                 <p className="font-circular-web font-medium text-black text-[10px] uppercase ml-3">
                   Treasury
@@ -174,7 +174,7 @@ const ShowCase = () => {
                 muted
                 src="/videos/case3.webm"
               />
-              <div className="flex justify-around items-center mb-2 sm:mb-0 sm:mt-3">
+              <div className="flex justify-around items-center mb-2 sm:mb-0 sm:-mt-15">
                 <div className="flex justify-between items-center gap-2">
                   <div className="h-2 w-2 rounded-full bg-black" />
                   <div className="text-[8px] text-blue-100">
@@ -201,13 +201,13 @@ const ShowCase = () => {
           </div>
 
           {/* Right - Revenue */}
-          <div className="flex justify-start sm:col-span-1 row-end-6 sm:row-span-2 ml-4 -mt-2 sm:mt-64">
-            <div className="h-[220px] w-[340px] bg-slate-300 rounded-sm relative ">
+          <div className="flex justify-start sm:col-span-1 row-end-6 sm:row-span-2 ml-4 -mt-2 sm:-mt-86">
+            <div className="h-[220px] w-[340px] sm:h-[120px] sm:w-[240px] bg-slate-300 rounded-sm relative ">
               <div className="flex flex-col items-start justify-start mt-2 ml-2">
                 <p className="font-general font-medium text-black text-xs uppercase md:text-[8px]">
                   Revenue generated <br /> 2024
                 </p>
-                <p className="norm-heading absolute left-5 bottom-0 special-font text-9xl z-10">
+                <p className="norm-heading absolute left-5 bottom-0 special-font text-9xl sm:text-6xl z-10">
                   4<b>0M</b>
                 </p>
               </div>
