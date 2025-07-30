@@ -124,7 +124,7 @@ const ShowCase = () => {
           </div>
 
           {/* Row 2 - Left */}
-          <div className="flex justify-end lg:-mt-3 col-span-2 sm:col-span-1 row-end-2 sm:row-span-1 -mt-3 sm:-mt-9">
+          <div className="flex justify-end lg:-mt-3 col-span-2 sm:col-span-1 row-end-2 sm:row-span-1 -mt-3 sm:-mt-9 md:-mt-21">
             <div className="relative rounded-sm h-[180px] w-[180px] sm:h-[145px] sm:w-[145px] md:h-[156px] md:w-[156px] lg:h-[200px] lg:w-[200px] bg-[#EDFF66] z-10 overflow-hidden">
               <p className="font-sans special-font text-9xl sm:text-7xl lg:text-8xl ml-2">
                 <b>30+</b>
@@ -157,7 +157,7 @@ const ShowCase = () => {
           </div>
 
           {/* Left - Treasury */}
-          <div className="flex justify-end lg:-mt-3 col-span-2 sm:col-span-1 row-end-3 sm:-mt-42 sm:row-span-1 ">
+          <div className="flex justify-end lg:-mt-3 col-span-2 sm:col-span-1 row-end-3 sm:-mt-42 md:-mt-63 sm:row-span-1 ">
             <div className="sm:h-[350px] sm:w-[240px] bg-[#5542FF] rounded-sm z-10  relative">
               <div className="flex flex-col w-[4px] items-start justify-start mt-2 ml-2">
                 <p className="font-circular-web font-medium text-black text-[10px] uppercase ml-3">
@@ -201,8 +201,8 @@ const ShowCase = () => {
           </div>
 
           {/* Right - Revenue */}
-          <div className="col-span-2 sm:col-span-1 sm:row-span-1 row-end-6 -mt-2 sm:-mt-22 sm:ms-0 -ml-8 sm:ml-4 ">
-            <div className="h-[220px] w-[340px] sm:h-[120px] sm:w-[240px] bg-slate-300 rounded-sm relative ">
+          <div className="col-span-2 sm:col-span-1 sm:row-span-1 row-end-6 -mt-2 sm:-mt-22 sm:ms-0 -ml-8 sm:ml-4 md:-mt-34 ">
+            <div className="h-[220px] w-[340px] sm:h-[120px] sm:w-[240px] md:h-[150px] md:w-[270px] bg-slate-300 rounded-sm relative ">
               <div className="flex flex-col items-start justify-start mt-2 ml-2">
                 <p className="font-general font-medium text-black text-xs uppercase md:text-[8px]">
                   Revenue generated <br /> 2024
