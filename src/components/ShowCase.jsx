@@ -67,7 +67,7 @@ const ShowCase = () => {
     <section
       ref={(el) => (sectionsRef.current[0] = el)}
       data-color="#000000"
-      className="min-h-[300vh] overflow-x-hidden w-screen relative"
+      className="min-h-fit overflow-x-hidden w-screen relative"
     >
       <div className="flex flex-col items-center sm:items-start justify-center sm:justify-start w-full h-fit overflow-hidden sm:ml-20 mt-52 overflow-x-hidden">
         <p className="font-general h-[10px] mb-2 font-medium ani text-xs uppercase md:text-[8px] sm:ml-4">
