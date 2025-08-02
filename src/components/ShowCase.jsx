@@ -67,7 +67,7 @@ const ShowCase = () => {
     <section
       ref={(el) => (sectionsRef.current[0] = el)}
       data-color="#000000"
-      className="min-h-fit overflow-x-hidden w-screen relative"
+      className="h-fit overflow-x-hidden w-screen relative"
     >
       <div className="flex flex-col items-center sm:items-start justify-center sm:justify-start w-full h-fit overflow-hidden sm:ml-20 mt-52 overflow-x-hidden">
         <p className="font-general h-[10px] mb-2 font-medium ani text-xs uppercase md:text-[8px] sm:ml-4">
@@ -106,17 +106,17 @@ const ShowCase = () => {
 
           {/* Row 1 - Right */}
           <div className="sm:col-span-1 sm:row-span-1 row-end-4 -mt-5  ml-4">
-            <div className="relative h-[379px] w-[280px] sm:h-[300px] sm:w-[220px] md:h-[350px] md:w-[250px] lg:h-[450px] lg:w-[340px] bg-[#5542FF] rounded-sm z-10">
+            <div className="relative h-[379px] w-[280px] sm:h-[300px] sm:w-[220px] md:h-[350px] md:w-[250px] lg:h-[580px] lg:w-[430px] bg-[#5542FF] rounded-sm z-10">
               <div className="flex flex-col w-[4px] items-start justify-start mt-2 ml-2">
                 <p className="font-circular-web font-medium text-black text-[10px] uppercase ml-3">
                   Residents
                 </p>
-                <p className="font-sans special-font text-8xl sm:text-6xl ml-2">
+                <p className="font-sans special-font text-8xl sm:text-6xl lg:text-9xl ml-2">
                   <b>500k+</b>
                 </p>
               </div>
               <img
-                className="absolute top-0 z-10 sm:h-[300px] md:h-[350px] lg:h-[450px]"
+                className="absolute top-0 z-10 sm:h-[300px] md:h-[350px] lg:h-[580px]"
                 src="/img/case4.webp"
                 alt=""
               />
